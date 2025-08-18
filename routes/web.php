@@ -9,11 +9,6 @@ use App\Livewire\Counter;
 });*/
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-
-// Health check endpoint for Railway
-Route::get('/health', function() {
-    return response()->json(['status' => 'ok', 'timestamp' => now()]);
-});
  
 Route::get('/counter', Counter::class);
 
